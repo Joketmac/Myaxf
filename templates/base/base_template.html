@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, 
      user-scalaber=no">
     <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">
-    {% block extcss %}
-    
+    <link rel="stylesheet" href="{% static 'base/css/reset.css' %}">
+    {% block extbasecss %}
     {% endblock %}
 
 </head>
@@ -25,8 +25,7 @@
 
 <script src="{% static 'base/js/jquery.min.js' %}"></script>
 <script src="{% static 'base/js/bootstrap.min.js' %}"></script>
-{% block extjs %}
-
+{% block extbasejs %}
 {% endblock %}
 
 </body>

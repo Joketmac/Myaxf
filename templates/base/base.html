@@ -2,12 +2,16 @@
 {% extends 'base/base_template.html' %}
 {% load static %}
 
-{% block extcss %}
-   <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+{% block extbasecss %}
+    <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+    {% block extcss %}
+    {% endblock %}
 {% endblock %}
 
-{% block extjs %}
+{% block extbasejs %}
     <script src="{% static 'base/js/base.js' %}"></script>
+    {% block extjs %}
+    {% endblock %}
 {% endblock %}
 
 {% block body %}
@@ -19,8 +23,8 @@
 
 
     {% block content %}
-
-
+        <h1>啦啦啦啦啦啦</h1>
+        <h2>哈哈哈哈哈哈</h2>
     {% endblock %}
 
 
