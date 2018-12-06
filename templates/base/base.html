@@ -1,4 +1,3 @@
-
 {% extends 'base/base_template.html' %}
 {% load static %}
 
@@ -16,23 +15,47 @@
 
 {% block body %}
 
-
+    {#    头部#}
     {% block header %}
         <header>爱鲜蜂</header>
     {% endblock %}
 
+    {#    主体内容#}
+    <div class="hidescroll">
+        <div id="content">
+            {% block content %}
 
-    {% block content %}
-        <h1>啦啦啦啦啦啦</h1>
-        <h2>哈哈哈哈哈哈</h2>
-    {% endblock %}
+            {% endblock %}
+        </div>
+    </div>
 
-
+    {#    底部#}
     {% block footer %}
         <footer>
-          底部模块
+            <a href="{% url 'axf:home' %}" class="home">
+                <dl>
+                    <dt><span></span></dt>
+                    <dd> 首页 </dd>
+                </dl>
+            </a>
+            <a href="{% url 'axf:market' %}" class="market">
+                <dl>
+                    <dt><span></span></dt>
+                    <dd> 闪购超市 </dd>
+                </dl>
+            </a>
+            <a href="{% url 'axf:cart' %}" class="cart">
+                <dl>
+                    <dt><span></span></dt>
+                    <dd> 购物车 </dd>
+                </dl>
+            </a>
+            <a href="{% url 'axf:mine' %}" class="mine">
+                <dl>
+                    <dt><span></span></dt>
+                    <dd> 我的 </dd>
+                </dl>
+            </a>
         </footer>
     {% endblock %}
-
-
 {% endblock %}
